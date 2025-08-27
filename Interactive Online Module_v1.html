@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Maya's Lupus Journey Interactive Module</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f7f6fa; margin: 0; padding: 0; }
+        .container { max-width: 900px; margin: auto; padding: 40px 20px; background: #fff; border-radius: 12px; box-shadow: 0 3px 14px rgba(0,0,0,0.08);}
+        .scene { margin-bottom: 36px; }
+        .scene img { display: block; margin: 22px auto 15px auto; max-width: 95%; border-radius: 7px;}
+        .dialogue, .diary, .reflection { margin-bottom: 18px; font-size: 1.12em; }
+        button { margin: 14px 12px 0 0; padding: 11px 30px; border-radius: 6px; border: none; background: #6563cc; color: #fff; font-size: 1.04em; cursor: pointer; }
+        button:hover { background: #4341a4;}
+        .hidden { display: none; }
+        .diary { background: #eceefa; border-left: 4px solid #6563cc; padding: 14px; font-style: italic; }
+        .reflection { background: #d7ebf8; border-left: 4px solid #2a86c8; padding: 14px; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>Maya’s Lupus Journey: Interactive Patient Perspective</h1>
+    <p>Follow Maya’s journey and explore her experience from symptoms to hospital care.<br>Reflect on clinical communication and patient support.</p>
+    
+    <!-- Scene 1: Beach -->
+    <div class="scene" id="scene1">
+        <h2>On the Beach</h2>
+        <img src="beach.png" alt="Maya on the beach with facial rash in sunlight">
+        <div class="dialogue">
+            Maya is at the beach, soaking up the sun. The warmth feels strong, and soon her skin stings and a rash appears across her cheeks. She feels unusually tired.
+        </div>
+        <div class="diary">
+            "I love the beach, but this sun is too much. Why am I so tired? Why does my skin feel this way?"
+        </div>
+        <button onclick="nextScene('scene2')">Continue</button>
+    </div>
+    
+    <!-- Scene 2: At Home -->
+    <div class="scene hidden" id="scene2">
+        <h2>At Home</h2>
+        <img src="home.png" alt="Maya washing dishes, hands aching">
+        <div class="dialogue">
+            Back home, Maya tries to do chores. Her arms and hands ache, her energy vanishes quickly, and rest doesn’t help.
+        </div>
+        <div class="diary">
+            "Washing a few dishes shouldn’t wear me out like this. My wrists and fingers feel stiff and sore. What’s wrong with me?"
+        </div>
+        <button onclick="nextScene('scene3')">Continue</button>
+    </div>
+    
+    <!-- Scene 3: At Work -->
+    <div class="scene hidden" id="scene3">
+        <h2>At Work</h2>
+        <img src="work.png" alt="Maya tired at her desk, struggling to stay awake">
+        <div class="dialogue">
+            At work, Maya drinks coffee but still feels exhausted. The rash is visible, her joints ache, and it's getting harder to focus.
+        </div>
+        <div class="diary">
+            "I keep falling behind. I wish people would understand—this isn’t just being tired. Something deeper is going on."
+        </div>
+        <button onclick="nextScene('scene4')">Continue</button>
+    </div>
+    
+    <!-- Scene 4: ER Visit -->
+    <div class="scene hidden" id="scene4">
+        <h2>Emergency Room</h2>
+        <img src="er.png" alt="Maya outside the ER, clutching her arms">
+        <div class="dialogue">
+            Maya’s pain and fatigue become overwhelming. Feeling scared, she heads to the ER for help, hoping someone will listen and take her concerns seriously.
+        </div>
+        <div class="diary">
+            "It’s hard to explain everything I’m feeling. I’m worried no one will believe me, but I can’t ignore these symptoms anymore."
+        </div>
+        <button onclick="nextScene('scene5')">Continue</button>
+    </div>
+    
+    <!-- Scene 5: Admitted to Hospital -->
+    <div class="scene hidden" id="scene5">
+        <h2>Admitted to Hospital</h2>
+        <img src="hospital_bed.png" alt="Maya waiting in the hospital bed for tests">
+        <div class="dialogue">
+            After triage, Maya is admitted for further evaluation. She’s unsure what’s happening and feels frightened by the uncertainty.
+        </div>
+        <div class="diary">
+            "I’m alone in this bed. Nurses and doctors come and go, asking me questions. I wish I understood what they’re looking for."
+        </div>
+        <div class="reflection">
+            <strong>Reflection:</strong> As a future physician, how could you help Maya feel heard and supported at this uncertain stage?
+        </div>
+        <button onclick="nextScene('scene5b')">Continue</button>
+    </div>
+    
+    <!-- Scene 5B: Doctor-Maya Conversation -->
+    <div class="scene hidden" id="scene5b">
+        <h2>Doctor – Patient Conversation</h2>
+        <img src="hospital_bed.png" alt="Maya in hospital, talking with doctor">
+        <div class="dialogue"><strong>Doctor:</strong> Hello Maya, thank you for coming in today. I understand you’ve been feeling very tired and have some joint pain?</div>
+        <div class="dialogue"><strong>Maya:</strong> Yes, I’m just so exhausted all the time and my hands and wrists hurt. I also have this rash that won’t go away.</div>
+        <div class="dialogue"><strong>Doctor:</strong> That sounds really tough. How long have you been experiencing these symptoms?</div>
+        <div class="dialogue"><strong>Maya:</strong> It started a few weeks ago, but it keeps getting worse. Some days I can barely do anything.</div>
+        <div class="dialogue"><strong>Doctor:</strong> You’re not alone, and I want you to know that we take these symptoms seriously. Can you tell me if anything makes them better or worse?</div>
+        <div class="dialogue"><strong>Maya:</strong> Rest sometimes helps, but everything seems harder lately. Being in the sun makes the rash worse.</div>
+        <div class="dialogue"><strong>Doctor:</strong> Thank you for sharing that. Our next step will be to run some tests to better understand what’s going on. While we wait for those results, is there anything you’re most worried about right now?</div>
+        <div class="dialogue"><strong>Maya:</strong> I’m worried no one will find out what’s wrong. I just want to feel normal again.</div>
+        <div class="dialogue"><strong>Doctor:</strong> I understand how frustrating it is not to have answers. We’ll work together to figure this out, and I’ll keep you updated every step of the way. If you feel worse or have new symptoms, please let us know right away. And if you have questions or concerns at any point, I’m here to listen.</div>
+        <div class="reflection">
+            <strong>Reflect:</strong> How did the doctor show empathy and support? How might you improve your communication if you were Maya’s clinician?
+        </div>
+        <button onclick="nextScene('scene6')">Continue</button>
+    </div>
+    
+    <!-- Scene 6: Testing and Waiting -->
+    <div class="scene hidden" id="scene6">
+        <h2>Testing and Waiting</h2>
+        <img src="hospital_test.png" alt="Maya undergoing more tests in the hospital">
+        <div class="dialogue">
+            Bloodwork and other tests are ordered. Maya answers countless questions and waits. No one gives her clear answers yet.
+        </div>
+        <div class="diary">
+            "The waiting is hard—I'm anxious, and I just want someone to explain things to me. Every test makes me nervous."
+        </div>
+        <div class="reflection">
+            <strong>Reflect:</strong> What emotions do you think Maya is experiencing right now? How might you communicate with her to ease her fears?
+        </div>
+        <button onclick="nextScene('scene7')">Continue</button>
+    </div>
+    
+    <!-- Scene 7: Hospital Progression -->
+    <div class="scene hidden" id="scene7">
+        <h2>Hospital Progression</h2>
+        <img src="hospital_progress.png" alt="Maya with her doctor, discussing next steps">
+        <div class="dialogue">
+            Maya speaks with a doctor about her lab results and symptoms. She’s told that more information is needed and that her team will keep her informed. She still doesn’t have a name for her illness.
+        </div>
+        <div class="diary">
+            "I feel lost and scared. I’m grateful they’re trying to help, but I wish I knew what’s going on inside my body."
+        </div>
+        <div class="reflection">
+            <strong>Reflect:</strong> Why is patient communication important at this stage? What questions would you encourage Maya to ask?
+        </div>
+        <button onclick="nextScene('scene8')">Continue</button>
+    </div>
+    
+    <!-- Scene 8: Further Care (Placeholder for Extension) -->
+    <div class="scene hidden" id="scene8">
+        <h2>Next Steps</h2>
+        <img src="hospital_next.png" alt="Maya continuing her journey in hospital">
+        <div class="dialogue">
+            Maya’s care team continues to investigate her symptoms. She hopes for answers and appreciates clinicians who listen and explain.
+        </div>
+        <div class="diary">
+            "Every kind word and clear explanation helps. Even when there aren't answers yet, knowing someone cares makes a difference."
+        </div>
+        <div class="reflection">
+            <strong>Reflect:</strong> What would you do if you were Maya’s clinician now?
+        </div>
+    </div>
+
+</div>
+
+<script>
+function nextScene(sceneId) {
+    let scenes = ['scene1','scene2','scene3','scene4','scene5','scene5b','scene6','scene7','scene8'];
+    for (let s of scenes) {
+        let el = document.getElementById(s);
+        if (el) el.classList.add('hidden');
+    }
+    let showEl = document.getElementById(sceneId);
+    if (showEl) showEl.classList.remove('hidden');
+}
+</script>
+</body>
+</html>
